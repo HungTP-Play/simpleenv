@@ -13,6 +13,14 @@ type Env struct {
   ENV_NUMBER int     `env:int`
   ENV_BOOLWAN bool   `env:bool`  
 }
+
+func main(){
+  envs := &Env{}
+  err := simpleenv.Load(envs)
+  if err != nil {
+      panic(err)
+  }
+}
 ```
 
 ---
